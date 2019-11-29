@@ -24,3 +24,12 @@ document.getElementById('tabs').onclick = function(ev) {
         }
     }
 }
+
+function showTabsContent(b) {
+    if (tabContent[b].classList.contains('hide')) {
+        hideTabsContent(0);
+        tab[b].classList.add('ruinbord');
+        tabContent[b].classList.remove('hide');
+        tabContent[b].classList.add('show');
+    }
+}
