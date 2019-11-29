@@ -1,16 +1,16 @@
 var tab; // заголовок вкладки
-var tabContent; // блок содержащий контент вкладки
+var tabs; // блок содержащий контент вкладки
 
 window.onload = function() {
-    tabContent = document.getElementsByClassName('tabs');
+    tabs = document.getElementsByClassName('tabs');
     tab = document.getElementsByClassName('tab');
     hideTabs(1);
 }
 
 function hideTabs(a) {
-    for (var i = a; i < tabContent.length; i++) {
-        tabContent[i].classList.remove('show');
-        tabContent[i].classList.add("hide");
+    for (var i = a; i < tabs.length; i++) {
+        tabs[i].classList.remove('show');
+        tabs[i].classList.add("hide");
         tab[i].classList.remove('ruibord');
     }
 }
@@ -27,10 +27,10 @@ document.getElementById('tabs').onclick = function(event) {
 }
 
 function showTabs(b) {
-    if (tabContent[b].classList.contains('hide')) {
+    if (tabs[b].classList.contains('hide')) {
         hideTabs(0);
         tab[b].classList.add('ruibord');
-        tabContent[b].classList.remove('hide');
-        tabContent[b].classList.add('show');
+        tabs[b].classList.remove('hide');
+        tabs[b].classList.add('show');
     }
 }
