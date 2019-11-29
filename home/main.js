@@ -1,10 +1,16 @@
-var tab;
-var tabCont;
+var tab; // заголовок вкладки
+var tabCont; // блок содержащий контент вкладки
 
-function hideContent() {
-    for (var i = 0; i < tabCont.lenght; i++) {
-        tabCont[i].classList.remove('show')
-        tabCont[i].classList.add('hide')
-        tab[i].classList.add('ruibord')
+window.onload = function() {
+    tabCont = document.getElementsByClassName('tabs');
+    tab = document.getElementsByClassName('tab');
+    hideTabs(1);
+}
+
+function hideTabs(a) {
+    for (var i = a; i < tabCont.length; i++) {
+        tabCont[i].classList.remove('show');
+        tabCont[i].classList.add("hide");
+        tab[i].classList.remove('ruibord');
     }
 }
