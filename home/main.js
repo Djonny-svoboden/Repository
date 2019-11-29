@@ -14,3 +14,13 @@ function hideTabs(a) {
         tab[i].classList.remove('ruibord');
     }
 }
+document.getElementById('tabs').onclick = function(ev) {
+    var target = ev.target;
+    if (target.className == "tab") {
+        for (var i = 0; i < tab.lenght; i++) {
+            if (target == tab[i]) {
+                showTabCont(i);
+            }
+        }
+    }
+}
