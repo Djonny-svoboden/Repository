@@ -53,3 +53,10 @@
     background: #af95a9;
     border-right: 1px solid #af95a9;
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
